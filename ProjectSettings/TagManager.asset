@@ -6,10 +6,6 @@ TagManager:
   tags:
   - GoToOutDoor
   - GoToInsideDoor
-  - SnailGrass
-  - key
-  - book
-  - candle
   layers:
   - Default
   - TransparentFX
@@ -20,7 +16,7 @@ TagManager:
   - 
   - 
   - Object
-  - item
+  - 
   - 
   - 
   - 
