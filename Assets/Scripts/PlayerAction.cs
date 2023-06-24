@@ -166,7 +166,7 @@ public class PlayerAction : MonoBehaviour
             {
                 hasEquip[0] = true;
 
-                Destroy(nearObject);
+                //Destroy(nearObject);
             }
             else if (nearObject.tag == "key")
             {
@@ -245,17 +245,15 @@ public class PlayerAction : MonoBehaviour
         }
 
     }*/
-    void OnTriggerStay(Collider other) /////충돌 체크 문제 해결 필요
+    void OnTriggerStay2D(Collider2D collision) /////충돌 체크 문제 해결 필요
     {
         Debug.Log("stay");
-        if (other.tag == "Equipment")
-            nearObject = other.gameObject;
-
-        Debug.Log(nearObject.name);
+        if (collision.tag == "SnailGrass" && collision.tag == "key" && collision.tag == "book" && collision.tag == "candle")
+            nearObject = collision.gameObject;
     }
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit2D(Collider2D collision)
     {
-        if (other.tag == "Equipment")
+        if (collision.tag == "Equipment")
             nearObject = null;
     }
 
